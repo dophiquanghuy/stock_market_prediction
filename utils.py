@@ -29,7 +29,9 @@ def evaluation(y_test, y_pred, test_pred):
 
 
 def data_preparation(df):
-    df.isnull().sum()
+    print(df.shape)
+    print(df.head)
+    df.dropna(inplace=True)
 
     print(df.shape)
 
@@ -60,7 +62,7 @@ def price_everyday(df):
 
     # plt.savefig('./img/price_everyday.png', dpi=300, bbox_inches='tight')
 
-    # plt.show()
+    plt.show()
 
 
 
@@ -81,7 +83,7 @@ def volume_chart(df):
     plt.ylabel('Volume')
     plt.title('Volume Chart with Anomalies')
     plt.legend()
-    # plt.show()
+    plt.show()
 
     # plt.savefig('./img/volume_chart.png', dpi=300, bbox_inches='tight')
 

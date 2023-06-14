@@ -15,16 +15,17 @@ df = pd.read_csv(path)
 Lam sach data
 """
 df = utils.data_preparation(df=df)
+df_0 = df
 
 
 """
 Data visualization
 """
-# utils.price_everyday(df)
+# utils.candlestick_chart(df=df_0)
 
-# utils.volume_chart(df)
+# utils.price_everyday(df=df)
 
-# utils.candlestick_chart(df)
+# utils.volume_chart(df=df)
 
 
 
@@ -46,7 +47,7 @@ y_test = test['Close'].values
 """
 Training mo hinh, 4 thuat toan regression
 """
-# training.linear_regression(x_train=x_train, x_test=x_test, y_train=y_train, y_test=y_test, test_pred=test_pred)
+training.linear_regression(x_train=x_train, x_test=x_test, y_train=y_train, y_test=y_test, test_pred=test_pred)
 
 # training.support_vector_regression(x_train=x_train, x_test=x_test, y_train=y_train, y_test=y_test, test_pred=test_pred)
 
